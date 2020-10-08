@@ -33,6 +33,7 @@ public protocol BarcodeScannerDismissalDelegate: class {
  */
 open class BarcodeScannerViewController: UIViewController {
   private static let footerHeight: CGFloat = 75
+  public var hideFooterView = false
 
   // MARK: - Public properties
 
@@ -235,7 +236,7 @@ private extension BarcodeScannerViewController {
       cameraView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
       cameraView.bottomAnchor.constraint(
         equalTo: view.bottomAnchor,
-        constant: -BarcodeScannerViewController.footerHeight
+        constant: hideFooterView ? 0 : -BarcodeScannerViewController.footerHeight
       )
     )
 
@@ -272,7 +273,7 @@ private extension BarcodeScannerViewController {
       messageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
       messageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
       messageView.heightAnchor.constraint(
-        equalToConstant: BarcodeScannerViewController.footerHeight
+        equalToConstant: hideFooterView ? 0 : -BarcodeScannerViewController.footerHeight
       )
     ]
   }
