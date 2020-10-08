@@ -95,7 +95,6 @@
 		D5B2E8951C3A780C00C0327D = {
 			isa = PBXGroup;
 			children = (
-				D50BE3E31C9FE7A80000A34C /* Images */,
 				D5C629691C3A809D007F7B7C /* Sources */,
 				D5C6295C1C3A800E007F7B7C /* BarcodeScanner */,
 				D5B2E8A01C3A780C00C0327D /* Products */,
@@ -121,6 +120,7 @@
 		D5C629691C3A809D007F7B7C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				D50BE3E31C9FE7A80000A34C /* Images */,
 				D5CB3785201947D000B9319D /* Helpers */,
 				D5CB37842019477900B9319D /* DataStructures */,
 				D55281BD20167D9F00FF3CDD /* Extensions */,
