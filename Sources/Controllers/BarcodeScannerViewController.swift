@@ -48,6 +48,10 @@ open class BarcodeScannerViewController: UIViewController {
   /// and waits for the next reset action.
   public var isOneTimeSearch = true
 
+    /// When the flag is set to `true` the screen is flashed on barcode scan.
+      /// Defaults to true.
+  public var shouldSimulateFlash = true
+    
   /// `AVCaptureMetadataOutput` metadata object types.
   public var metadata = AVMetadataObject.ObjectType.barcodeScannerMetadata {
     didSet {
@@ -198,6 +202,13 @@ open class BarcodeScannerViewController: UIViewController {
    - Parameter processing: Flag to set the current state to `.processing`.
    */
   private func animateFlash(whenProcessing: Bool = false) {
+    guard shouldSimulateFlash else {
+        if whenProcessing {
+            self.status = Status(state: .processing)
+        }
+        return
+    }
+
     let flashView = UIView(frame: view.bounds)
     flashView.backgroundColor = UIColor.white
     flashView.alpha = 1
