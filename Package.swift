@@ -8,7 +8,7 @@ let package = Package(
     defaultLocalization: "en",
     platforms: [.iOS(.v10),
                .macOS(.v11),
-               .macCatalyst(.v14)],
+               .macCatalyst(.v15)],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
