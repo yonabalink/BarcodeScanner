@@ -6,9 +6,7 @@ import PackageDescription
 let package = Package(
     name: "BarcodeScanner",
     defaultLocalization: "en",
-    platforms: [.iOS(.v10),
-               .macOS(.v11),
-               .macCatalyst(.v15)],
+    platforms: [.iOS(.v11)],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
