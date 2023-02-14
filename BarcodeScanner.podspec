@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.source_files = 'Sources/**/*'
   s.resource_bundles = {
     'BarcodeScanner' => ['Images/*.{png}'],
-    'Localization' => ['Localization/*.lproj/Localizable.strings']
+    'Localization1' => ['Localization/*.lproj/Localizable.strings']
   }
   s.frameworks = 'UIKit', 'AVFoundation'
   s.swift_version = '5.0'
